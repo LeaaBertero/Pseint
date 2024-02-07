@@ -1,25 +1,33 @@
-Proceso sin_titulo
+Proceso frase_contador
 	
 	Definir frase Como Caracter;
 	Definir contador Como Entero;
 	
 	Escribir "Ingrese una frase";
-	Leer frase;
+	leer frase;
 	
 	Limpiar Pantalla;
 	
-	Escribir "La frase ingresada es:", " ", frase;
+	Escribir "La frase ingresada es...";
+	
 	Escribir "";
-	Escribir "Presione una tecla para deletrear";
+	
+	Escribir " --> ", " ", (frase), " <-- ", "presione una tecla para continuar";
+	
 	Esperar Tecla;
 	
-	Escribir "";
+	Limpiar Pantalla;
 	
-	Para contador<-0 Hasta Longitud(frase) -1 Con Paso 1 Hacer
-		Escribir "Letra N° ", " ", contador, " ", SubCadena(frase,contador,contador +1);
+	Para contador <-0 Hasta Longitud(frase) -1 Con Paso 1 Hacer
+		Escribir "Letra N° ", contador + 1, " --> ", SubCadena(frase,contador,contador);
 		Esperar Tecla;
 	FinPara
 	
-	Escribir "la cantidad de le tra de la frase es de ", " ", contador , " ", "Letras" ;
+	Escribir "";
+	
+	Escribir "El total de las letras de la frase ingresada es de:", " ", contador, " ", "Letras";
+	
+	Escribir "Enter, para finalizar el programa";
+	
 	
 FinProceso
